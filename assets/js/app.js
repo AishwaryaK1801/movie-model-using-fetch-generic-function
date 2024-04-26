@@ -61,7 +61,7 @@ const templatingOfMovies=(arr)=>{
   let result =``;
   arr.forEach(obj=>{
     result+=
-    `<div class="col-md-4 col-sm-6">
+    `<div class="col-md-4 col-sm-12">
     <div class="card mb-4">
       <figure class="movieCard mb-0" id="${obj.movieId}">
         <img src="${obj.imgUrl}" title="${obj.title}">
@@ -250,7 +250,7 @@ fetchPosts();
 const createMovieCard=(obj)=>{
  let card=  document.createElement("div");
 
-  card.className ="col-md-4 col-sm-6";
+  card.className ="col-md-4 col-sm-12";
   card.innerHTML=`
   
   <div class="card mb-4">
