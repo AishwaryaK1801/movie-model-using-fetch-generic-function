@@ -62,7 +62,10 @@ body{
 	width: 100%;
 	color: #fff;
 }
-
+.overviewSection p{
+	 overflow: auto;
+	 height: 70%;	
+}  
 .movieCard:hover .overviewSection,
 .movieCard:focus .overviewSection,
 .movieCard:active .overviewSection{
