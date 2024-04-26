@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+  <html lang="en" >
+    <head>
+      <title>Movie Model Task - Firebase</title>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+        crossorigin="anonymous"
+      />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.min.css"
+      />
+
+      <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+
+    <body>
+      <header class="p-4 mb-4">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-8">
+              <a href="index.html" class="logo">
+                <img src="./assets/images/logo-d-plus (1).webp" alt="logo" title="logo">
+              </a>
+            </div>
+            <div class="col-sm-4 text-center">
+              <div class="col-md-4">
+                <button class="buttonGetCssScan" id="showModel">AddMovie</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </header>
+      <div class="container">
+        <div class="row" id="movieContainer">
+          <!-- <div class="col-md-4">
+            <div class="card">
+              <figure class="movieCard mb-0">
+                <img src="" alt="movie1" alt="movie1">
+                <figcaption>
+                  <div class="ratingSection">
+                    <div class="row">
+                      <div class="col-md-10">
+                        <h3 class="mb-0 movieTitle">movie title</h3>
+                      </div>
+                      <div class="col-md-2">
+                        rating
+                      </div>
+                    </div>
+                  </div>
+                  <div class="overviewSection">
+                    <h4>title</h4>
+                    <em>overview</em>
+                    <p>
+                      Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore 
+                    </p>
+                    <div class="action">
+                      <button class="btn btn-info">Edit</button>
+                      <button class="btn btn-danger">Delete</button>
+      
+                    </div>
+                  </div>
+                  
+                </figcaption>
+              </figure>
+            </div>
+          </div> -->
+        </div>
+        
+      </div>
+
+      <div class="backDrop closeModel" id="backDrop"></div>
+
+      <div class="movieModel card" id="movieModel">
+        <div class="card-header">
+          <h3>
+            Add Movie Info
+            <i class="fa-solid fa-x float-right closeModel"></i> 
+          </h3>
+        </div>
+        <div class="card-body">
+          <form id="movieForm">
+            <div class="form-group">
+              <label for="title"> Title</label>
+              <input type="text" required class="form-control" id="title">
+            </div>
+            <div class="form-group">
+              <label for="imgUrl"> Movie Image</label>
+              <input type="text" required class="form-control" id="imgUrl">
+            </div>
+            <div class="form-group">
+              <label for="overview"> Overview</label>
+              <textarea rows="4" required class="form-control" id="overview"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="rating"> Rating</label>
+              <select required class="form-control" id="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="text-right">
+              <button class="btn btn-outline-danger closeModel" type="button">cancel</button>
+              <button class="btn btn-outline-success" id="addMovie" type="submit">Add Movie</button>
+              <button class="btn btn-outline-warning d-none" id="updateMovie" type="button">Update Movie</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="loader d-none" id="loader">
+        <img src="./assets/images/snail loader.png!bw700" alt="loader">
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.all.min.js"></script>
+      <script src="./assets/js/app.js"></script>
+    </body>
+    </html>
